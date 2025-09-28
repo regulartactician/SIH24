@@ -5,16 +5,6 @@ from PIL import Image
 from io import BytesIO
 import pyrebase 
 
-firebaseConfig = {
-    'apiKey': "AIzaSyBfxk9lar14KhnrDUHIesabFISu832W57o",
-    'authDomain': "jaldiproject-ea300.firebaseapp.com",
-    "databaseURL": "https://jaldiproject-ea300-default-rtdb.asia-southeast1.firebasedatabase.app/",
-    'projectId': "jaldiproject-ea300",
-    'storageBucket': "jaldiproject-ea300.firebasestorage.app",
-    'messagingSenderId': "823470948277",
-    'appId': "1:823470948277:web:98a72f0fab56e86036e3fc",
-    'measurementId': "G-1D8VZZ725Y"
-}
 
 
 firebase = pyrebase.initialize_app(firebaseConfig)
