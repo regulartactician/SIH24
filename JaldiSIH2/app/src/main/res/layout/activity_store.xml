@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/landing"
+    android:layout_height="match_parent"
+    tools:context=".Complain">
+
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0083BB"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Jaldi."
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00842E2E"
+            android:contentDescription="Menu"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Raise a Complain Text -->
+
+
+    <TextView
+        android:id="@+id/nearbystorestext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Near By Stores"
+        android:textColor="@android:color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:translationZ="15dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/circular_vera_colour"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/nearbystorestext"
+        tools:layout_editor_absoluteX="10dp">
+
+
+        <TextView
+            android:id="@+id/storenametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="Store Name"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/ownernamelabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="Owner Name"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/storenametext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ownernametext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="47dp"
+            android:gravity="center"
+            android:text="OwnerName"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/storenametext"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/addresslabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Address"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/ownernamelabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ownernamelabel" />
+
+        <TextView
+            android:id="@+id/addresstext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            android:text="Trichy-Tanjore Road, Thirumalaisamudram, Thanjavur, Tamil Nadu 613401"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/addresslabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addresslabel"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/phonebutton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/phone_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight="20dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addresstext"
+            app:layout_constraintTop_toTopOf="@+id/addresstext"
+            app:layout_constraintWidth="20dp" />
+
+        <TextView
+            android:id="@+id/phonelabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="65dp"
+            android:text="Phone Number"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/addresstext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addresstext"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/phonetext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="170dp"
+            android:layout_marginTop="68dp"
+            android:text="+91 xxxxx-xxxxx"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addresstext"
+            app:layout_constraintTop_toTopOf="@+id/addresstext" />
+
+        <Button
+            android:id="@+id/emailbutton"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/mail_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/phonebutton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/phonebutton"
+            app:layout_constraintWidth="20dp"
+            app:layout_constraintHeight="20dp" />
+
+        <TextView
+            android:id="@+id/emaillabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            android:text="Email"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/phonelabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/phonelabel"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/emailtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginTop="28dp"
+            android:text="shop1@gmail.com"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phonetext"
+            app:layout_constraintTop_toTopOf="@+id/phonetext"/>
+
+        <Button
+            android:id="@+id/nextbutton"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="320dp"
+            android:background="@drawable/next_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight="30dp"
+            app:layout_constraintHorizontal_bias="0.107"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailbutton"
+            app:layout_constraintTop_toTopOf="@+id/emailbutton"
+            app:layout_constraintWidth="30dp" />
+
+        <Button
+            android:id="@+id/previousbutton"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/previous_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight="30dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailbutton"
+            app:layout_constraintTop_toTopOf="@+id/emailbutton"
+            app:layout_constraintWidth="30dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

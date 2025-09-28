@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context=".StatusActivity">
+
+    <!-- Header Layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header_color"
+        android:elevation="4dp"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Menu"
+            app:srcCompat="@android:drawable/ic_menu_sort_by_size"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jaldi."
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/menuButton"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Ticket ListView -->
+    <ListView
+        android:id="@+id/ticketListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/divider_color"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        android:background="@android:color/white" />
+
+    <!-- Ticket Details TextView -->
+    <TextView
+        android:id="@+id/ticketDetailsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:textSize="14sp"
+        android:background="@color/card_background"
+        android:layout_margin="8dp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="bottom"
+        android:elevation="4dp" />
+</LinearLayout>

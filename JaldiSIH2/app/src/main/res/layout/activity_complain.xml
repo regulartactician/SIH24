@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/landing"
+    android:layout_height="match_parent"
+    tools:context=".Complain">
+
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0083BB"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Jaldi."
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00842E2E"
+            android:contentDescription="Menu"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Raise a Complain Text -->
+    <TextView
+        android:id="@+id/raiseComplainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Raise a Complaint"
+        android:textColor="@android:color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:translationZ="15dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/circular_vera_colour"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/raiseComplainText">
+
+        <!-- Type of Complaint Text -->
+        <TextView
+            android:id="@+id/typeOfComplaintText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Type of Complaint"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Complaint Type Spinner -->
+        <Spinner
+            android:id="@+id/complaintTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:entries="@array/complaint_types"
+            android:padding="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typeOfComplaintText"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <!-- EditText for "Other" Complaint Type -->
+        <EditText
+            android:id="@+id/otherComplaintTypeEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Please specify the complaint type"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/complaintTypeSpinner"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <!-- Complaint Description Text -->
+        <TextView
+            android:id="@+id/complaintDescriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Complaint Description (Optional)"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otherComplaintTypeEditText" />
+
+        <!-- Complaint Description EditText -->
+        <EditText
+            android:id="@+id/complaintDescriptionEditText"
+            android:layout_width="0dp"
+            android:background="@color/white"
+            android:paddingVertical="50dp"
+            android:layout_height="wrap_content"
+            android:hint="    Describe your complaint..."
+            android:inputType="textMultiLine"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/complaintDescriptionText"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <Button
+            android:id="@+id/raiseButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circular_background"
+            android:text="Raise !"
+            android:textColor="@android:color/black"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/complaintDescriptionEditText"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <!-- Bill TextView -->
+        <TextView
+            android:id="@+id/billTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Bill: ₹0"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/raiseButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <!-- Refresh Button -->
+        <Button
+            android:id="@+id/refreshButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circular_background"
+            android:text="Refresh bill"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/raiseButton"
+            app:layout_constraintStart_toEndOf="@id/billTextView"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

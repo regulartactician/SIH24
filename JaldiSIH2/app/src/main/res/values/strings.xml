@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">JaldiSIH2</string>
+    <string-array name="complaint_types">
+        <item>Choose Here...</item>
+        <item>Blockage</item>
+        <item>Water Contamination</item>
+        <item>Breakage</item>
+        <item>Maintenance</item>
+        <item>Other</item>
+    </string-array>
+    <string name="googlepay_button_content_description">Google Pay</string>
+</resources>

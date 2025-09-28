@@ -1,0 +1,21 @@
+# Firebase service account JSONs
+*.json
+
+# Environment variable files
+.env
+
+# Android Studio / Gradle / build files
+.gradle/
+build/
+local.properties
+
+# IDE specific files
+*.iml
+.idea/
+.DS_Store
+
+# Logs
+*.log
+
+# Hugging Face tokens or other secret files
+HuggingFaceAPI.java

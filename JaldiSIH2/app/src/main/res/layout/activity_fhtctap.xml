@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/landing"
+    android:layout_height="match_parent"
+    tools:context=".Bills">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0083BB"
+        android:translationZ="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Jaldi."
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00842E2E"
+            android:contentDescription="Menu"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FHTC Tap Request"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:paddingTop="20dp"
+        android:paddingHorizontal="20dp"
+        android:id="@+id/bills"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bills"
+        android:padding="3dp"
+        android:background="@android:color/holo_blue_dark"
+        android:id="@+id/line"
+        android:layout_marginHorizontal="20dp"></RelativeLayout>
+
+    <TextView
+        android:id="@+id/totalUsersLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Happy to Welcome to FHTC Platflom"
+        android:textSize="23sp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Phone Number Input Field -->
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:hint="Enter phone number"
+        android:layout_width="414dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalUsersLabel" />
+
+    <TextView
+        android:id="@+id/requestTapLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you want to request tap?"
+        android:textSize="23sp"
+        app:layout_constraintTop_toBottomOf="@id/phoneNumberEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/requestTapButton"
+        android:layout_width="147dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="20dp"
+        android:text="Request Tap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/requestTapLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
